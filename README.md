@@ -1,24 +1,49 @@
-# README
+## テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column                 | Type   | Options     |
+| ------------------     | ------ | ----------- |
+| nickname               | string | null: false |
+| email                  | string | null: false ,unique：true|
+| encrypted_password     | string | null: false |
+| family_name            | string | null: false |
+| first_name             | string | null: false |
+| family_name_kana       | string | null: false |
+| first_name_kana        | string | null: false |
+| birth_day              | date   | null: false |
 
-* Ruby version
+## Association
+has_many :items
+belongs_to :destination
+## items テーブル
 
-* System dependencies
+| Column          | Type       | Options                       |
+| ------          | ------     | -----------------             |
+| name            | string     | null: false|
+| description     | text       | null: false|
+| image           | string     | null: false,                  |
+| shipping_cost   | string     | null: false |
+| shipping_days   | text       | null: false|
+| category        | string     | null: false,                  |
+| user            | references | null: false,                  |
+| status          | string     | null: false,                  |
 
-* Configuration
+## Association
+belongs_to :user
+belongs_to :destination
+## destination テーブル
 
-* Database creation
+| Column         | Type           | Options                        |
+| ------         | ----------     | ------------------------------ |
+| post_code      | string         |null:false,                   |
+| prefecture     | string         | null: false,                   |
+| city           | string         | null: false,                   |
+| user           | references     | null: false, foreign_key: true |
+| building_name  | string         | null: false,                  |
+| phone_number   | string         | null: false,                  |
+| address        | string         | null: false,                  |
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Association
+belongs_to :user
+has_many :items
