@@ -26,12 +26,12 @@ belongs_to :destination
 | shipping_cost   | string     | null: false |
 | shipping_days   | text       | null: false|
 | category        | string     | null: false,                  |
-| user            | references | null: false,                  |
+| user            | references | null: false, foreign_key: true |
 | status          | string     | null: false,                  |
 
 ## Association
 belongs_to :user
-belongs_to :destination
+has_one :destination
 ## destination テーブル
 
 | Column         | Type           | Options                        |
