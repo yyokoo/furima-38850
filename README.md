@@ -15,8 +15,7 @@
 
 ## Association
 has_many :items
-belongs_to :destination
-has_one :order
+has_many :orders
 ## items テーブル
 
 | Column          | Type       | Options                       |
@@ -24,16 +23,16 @@ has_one :order
 | name            | string     | null: false|
 | description     | text       | null: false|
 | user            | references | null: false, foreign_key: true |
-| price           | string     | null: false| 
-| status_id       | string     | null: false                  |
-| category_id     | integer     | null: false                |
-| shipping_days_id| integer       | null: false|
+| price           | integer    | null: false| 
+| status_id       | integer    | null: false                  |
+| category_id     | integer    | null: false                |
+| shipping_days_id| integer    | null: false|
 | shipping_cost_id| integer    | null: false |
-| prefecture_id   | integer     | null: false|
+| prefecture_id   | integer    | null: false|
 
 ## Association
 belongs_to :user
-has_one :order
+belongs_to :order
 
 ## destinations テーブル
 
@@ -42,7 +41,7 @@ has_one :order
 | post_code      | string         | null:false                  |
 | prefecture_id  | integer        | null: false                   |
 | city           | string         | null: false                   |
-| order_id       | references     | null: false, foreign_key: true |
+| order          | references     | null: false, foreign_key: true |
 | building_name  | string         |                  |
 | phone_number   | string         | null: false                  |
 | address        | string         | null: false                  |

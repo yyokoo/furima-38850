@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="hPUGMhigIW1tk5o6sYi4" name="ページ1">
-        <mxGraphModel dx="732" dy="2911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="876" dy="2911" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -25,7 +25,7 @@
                 <mxCell id="41" value="&lt;ul style=&quot;font-size: 24px;&quot;&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;name&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;description&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;user&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;status_id&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;category_id&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;shipping_days_id&amp;nbsp;&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;shipping_cost_id&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;b&gt;&lt;sub&gt;&amp;nbsp;price&amp;nbsp;&lt;/sub&gt;&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;&lt;b&gt;&lt;sub&gt;prefecture_id &lt;/sub&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=16;horizontal=1;rotation=0;" vertex="1" parent="40">
                     <mxGeometry y="30" width="360" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="63" style="edgeStyle=none;html=1;fontSize=21;startArrow=ERone;startFill=0;entryX=1;entryY=0.604;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=ERone;endFill=0;strokeWidth=6;" edge="1" parent="1" target="12">
+                <mxCell id="63" style="edgeStyle=none;html=1;fontSize=21;startArrow=ERone;startFill=0;entryX=1;entryY=0.604;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=ERmany;endFill=0;strokeWidth=6;" edge="1" parent="1" target="12">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="690" y="-1380" as="sourcePoint"/>
                         <mxPoint x="360" y="-1645" as="targetPoint"/>
