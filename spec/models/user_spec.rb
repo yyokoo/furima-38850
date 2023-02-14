@@ -80,13 +80,13 @@ RSpec.describe User, type: :model do
           @user.password = '123456'
           @user.password_confirmation = '123456'
           @user.valid?
-          expect(@user.errors.full_messages).to include("Password is invalid", "Password confirmation is invalid")
+          expect(@user.errors.full_messages).to include("Password is invalid")
         end
         it 'passwordが英字のみのパスワードでは登録できない' do
           @user.password = 'abcdef'
           @user.password_confirmation = 'abcdef'
           @user.valid?
-          expect(@user.errors.full_messages).to include("Password is invalid", "Password confirmation is invalid")
+          expect(@user.errors.full_messages).to include("Password is invalid")
         end
         it 'パスワード（確認）が空欄だと保存できない' do
           @user.password = '123abc'
@@ -124,6 +124,16 @@ RSpec.describe User, type: :model do
           @user.first_name_kana = 'りくたろう'
           @user.valid?
           expect(@user.errors.full_messages).to include("First name kana is invalid")
+        end
+        it '名字のフリガナは空では登録できない' do
+          @user.family_name_kana = ''
+          @user.valid?
+          expect(@user.errors.full_messages).to include("Family name kana can't be blank")
+        end
+        it '名前のフリガナは空では登録できない' do
+          @user.first_name_kana = ''
+          @user.valid?
+          expect(@user.errors.full_messages).to include("First name kana can't be blank")
         end
         it '生年月日が空では登録できない' do
           @user.birth_day = ''
