@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   
   belongs_to :category
   belongs_to :prefecture
-  belongs_to :status
+  belongs_to :item_status
   belongs_to :shipping_cost
   belongs_to :shipping_days
 
@@ -15,7 +15,7 @@ class Item < ApplicationRecord
     validates :name
     validates :description
     validates :category_id
-    validates :status_id
+    validates :item_status_id
     validates :shipping_cost_id
     validates :shipping_days_id
     validates :prefecture_id
