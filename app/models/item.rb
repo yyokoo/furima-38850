@@ -9,10 +9,9 @@ class Item < ApplicationRecord
   belongs_to :shipping_day
 
   has_one_attached :image
-
+ 
 
   with_options presence: true do
-    validates :user_id
     validates :name
     validates :description
     validates :category_id
