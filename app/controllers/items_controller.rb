@@ -30,6 +30,9 @@ class ItemsController < ApplicationController
       render 'edit'
     end
 
+    def destroy
+    end
+
   end
 
   private
