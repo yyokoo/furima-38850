@@ -101,6 +101,11 @@ RSpec.describe OrderForm, type: :model do
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include("Phone number is invalid")
       end
+      it '電話番号が9桁以下の時保存ができない' do
+        @order_form.phone_number = 123_456_78
+        @order_form.valid?
+        expect(@order_form.errors.full_messages).to include("Phone number is invalid")
+      end
       it 'トークンが空だと保存ができない' do
         @order_form.token = ''
         @order_form.valid?
