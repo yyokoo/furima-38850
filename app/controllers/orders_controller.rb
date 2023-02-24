@@ -2,7 +2,8 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :seller_purchase
   def index
-    @order_form = OrderForm.new
+     @order_form = OrderForm.new
+    
   end
 
   def create
@@ -31,7 +32,7 @@ class OrdersController < ApplicationController
   end
   def seller_purchase
     @item = Item.find(params[:item_id])
-    if @item.user_id == current_user.id  
+    if @item.user_id == current_user.id || @item.order.present?
       redirect_to root_path
     end
   end
